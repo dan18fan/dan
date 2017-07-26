@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+	<!--Gets triggered by the record with id 'buttons_example_action'. Which in turn is triggered on click. -->
+	<record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+	    <field name="arch" type="xml">
+	<!--The action -->
+        <xpath expr="//header/button[@name='print_quotation']" position="after">
+                <button string="Orden de Trabajo" type="object" name="print_work_order"/>
+        </xpath>
+     </field>
+    </record>
+    </data>
+</odoo>

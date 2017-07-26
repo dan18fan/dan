@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="orden_trabajo_report"
+            string="Orden de Trabajo"
+            model="boton.ot"
+            report_type="qweb-pdf"
+            file="orden_trabajo.orden_de_trabajo"
+            name="orden_trabajo.orden_de_trabajo"
+            menu="True"
+        />
+    </data>
+</odoo>

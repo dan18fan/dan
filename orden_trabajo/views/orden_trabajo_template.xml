@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="orden_trabajo.orden_de_trabajo" name="Orden de Trabajo">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="s">
+                <t t-foreach="docs" t-as="l">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                            <h2>Datos de variables</h2>
+                            <table class="table table-stripped">
+                                <thead>
+                                    <tr>
+                                        <th>Orden</th>
+                                        <th>Cliente</th>
+                                        <th>Producto/Descripción</th>
+                                        <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> <t t-esc="s.name"></t></td>
+                                        <td> <t t-esc="s.partner_id"></t></td>
+                                        <td> <t t-esc="l.product_id"></t></td>
+                                        <td> <t t-esc="l.product_uom_qty"></t></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                         </div>
+                    </t>
+                </t>
+            </t>
+            </t>
+        </template>
+    </data>
+</odoo>
