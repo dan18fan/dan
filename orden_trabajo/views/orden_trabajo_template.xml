@@ -3,33 +3,126 @@
     <data>
         <template id="orden_trabajo.orden_de_trabajo" name="Orden de Trabajo">
             <t t-call="report.html_container">
-                <t t-foreach="docs" t-as="s">
-                <t t-foreach="docs" t-as="l">
+                <t t-foreach="docs" t-as="o">
                     <t t-call="report.external_layout">
                         <div class="page">
-                            <h2>Datos de variables</h2>
+                            <h2><center>Orden de Trabajo</center></h2>
                             <table class="table table-stripped">
                                 <thead>
                                     <tr>
                                         <th>Orden</th>
                                         <th>Cliente</th>
-                                        <th>Producto/Descripción</th>
+                                        <th>Descripción</th>
                                         <th>Cantidad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <tr>
+                                    <td><t t-esc="o.name"/></td>
+                                    <td><t t-esc="o.partner_id.name"/></td>
+                                    <td><t t-esc="o.product_id.name"/></td>
+                                    <td><t t-esc="o.product_uom_qty"/></td>
+                                </tr>
+                                </tbody>
+                             </table>
+                            <h3><center>Proceso</center></h3>
+                            <table class="table table-stripped">
+                                <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Paso</th>
+                                            <th>Maquina</th>
+                                            <th>Requerimiento adicional</th>
+                                            <th>Observaciones</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>Material</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td>Lo proporciona al cliente</td>
+                                      </tr>
                                     <tr>
-                                        <td> <t t-esc="s.name"></t></td>
-                                        <td> <t t-esc="s.partner_id"></t></td>
-                                        <td> <t t-esc="l.product_id"></t></td>
-                                        <td> <t t-esc="l.product_uom_qty"></t></td>
-                                    </tr>
+                                        <td>2</td>
+                                        <td>Limpiar</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td> </td>
+                                      </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Medir</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td>Los chicos se separan y se regresan al cliente</td>
+                                      </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Rectificado</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td> </td>
+                                      </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Samblastear</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td> </td>
+                                      </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Inspección</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td> </td>
+                                      </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Limpiar</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td> </td>
+                                      </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Empaque</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td> </td>
+                                      </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Envio</td>
+                                        <td> </td>
+                                        <td> </td>
+                                        <td> </td>
+                                      </tr>
                                 </tbody>
                             </table>
+                                    <tr>
+                                        <td>EMISOR:____________________________________</td>
+                                    </tr>
+                                    <tr>
+                                        <td>   GERENTE DE PRODUCCIÓN:______________________________________</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FECHA:_____________________________________</td>
+                                    </tr>
+                                    <tr>
+                                        <td>   FECHA RECIBIDO:_______________________________________________</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HORA:______________________________________</td>
+                                    </tr>
+                                    <tr>
+                                        <td>   FECHA TERMINACIÓN ORDEN:_____________________________________</td>
+                                    </tr>
                          </div>
                     </t>
                 </t>
-            </t>
             </t>
         </template>
     </data>

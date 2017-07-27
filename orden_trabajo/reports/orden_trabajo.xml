@@ -4,7 +4,7 @@
         <report
             id="orden_trabajo_report"
             string="Orden de Trabajo"
-            model="boton.ot"
+            model="sale.report"
             report_type="qweb-pdf"
             file="orden_trabajo.orden_de_trabajo"
             name="orden_trabajo.orden_de_trabajo"
